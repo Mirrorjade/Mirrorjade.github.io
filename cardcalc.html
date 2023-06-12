@@ -9,6 +9,7 @@
         body{padding: 0; margin: 0;}
         div{text-align: center; margin-left: auto; margin-right: auto; width: 40em;}
         #full_div{width: auto; height: auto; border: 1px;}
+        #full_div1{width: auto; height: auto; border: 5px; border-color: black;}
     </style>
        
         
@@ -41,9 +42,9 @@
 
             // adding to a result table 
             let p1 = document.createElement("p");
-            let s1 = document.createTextNode(`${final} From eBay`);
+            let s1 = document.createTextNode(`£${final} From eBay`);
             p1.appendChild(s1)
-            document.getElementById("mydiv").appendChild(p1);
+            document.getElementById("full_div1").appendChild(p1);
 
         }
         function cardMcalc(){
@@ -60,9 +61,9 @@
 
             // adding to a result table 
             let p1 = document.createElement("p");
-            let s1 = document.createTextNode(`${final} From CardMarket`);
+            let s1 = document.createTextNode(`£${final} From CardMarket`);
             p1.appendChild(s1)
-            document.getElementById("mydiv").appendChild(p1);
+            document.getElementById("full_div1").appendChild(p1);
         }
     
     </script>
@@ -83,7 +84,7 @@
         <br><br>
     </body1>
 
-    <div id="full_div">
+    <div id="full_div1">
         <thead>The Cards True Value is. . .</thead>
     </div>
 

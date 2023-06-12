@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Calculator</title>
+</head>
+<body>
+    <h1>Card Calculator</h1>
+    <hr>
+        
+    <script>
+        function ebaycalc(){
+
+            //ebay logic deduction (ebay take 12%, GBP and try to include p&p)
+            let cardval = document.getElementById("cardval").value;
+            console.log(cardval)
+            cardval = cardval *0.88
+            let postage = 0
+            if(cardval>=30){postage=2.95}
+            else if(cardval<30){postage=0.95}
+            if (postage >= 2.95){postage= 2.95}
+            postage = postage.toFixed(2)
+            let final= cardval - postage
+            final = final.toFixed(2)
+
+            // adding to a result table 
+            let p1 = document.createElement("p");
+            let s1 = document.createTextNode(`${final}`);
+            p1.appendChild(s1)
+            document.getElementById("mydiv").appendChild(p1);
+
+        }
+        function cardMcalc(){
+            //card Marc logic deduct (cardm take 3% of sales, in euros and customer pays postage)
+            let cardval = document.getElementById("cardval").value;
+            console.log(cardval)
+            cardval = cardval*0.97
+            cardval = cardval.toFixed(2)
+            let euro_val = 1.13
+            final = cardval/euro_val
+            final = final.toFixed(2)
+
+            // adding to a result table 
+            let p1 = document.createElement("p");
+            let s1 = document.createTextNode(`${final}`);
+            p1.appendChild(s1)
+            document.getElementById("mydiv").appendChild(p1);
+        }
+    </script>
+    <form name ="Card info">
+        <label for="CardValue" style="margin:10px">Enter Card Value</label>
+        <input id="cardval" type="float" name="inputted_card_value" style="margin: 10px;">
+        <br>
+
+        <p>Click a button to Calculate Card Value</p>
+        <input type="button" value="eBay" style="margin:10px;" onclick="ebaycalc();">
+        <input type="button" value="CardMarket" style="margin:10px" onclick="cardMcalc();">
+    </form>
+
+    <div id="mydiv">
+        <thead>The Cards True Value is. . .</thead>
+    </div>
+</body>
+</html>

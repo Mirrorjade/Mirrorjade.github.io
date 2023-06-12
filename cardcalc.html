@@ -9,7 +9,9 @@
 <body>
     <h1>Card Calculator</h1>
     <hr>
-        
+        <h2>
+
+        </h2>
     <script>
         function ebaycalc(){
 
@@ -22,12 +24,13 @@
             else if(cardval<30){postage=0.95}
             if (postage >= 2.95){postage= 2.95}
             postage = postage.toFixed(2)
+            console.log(postage)
             let final= cardval - postage
             final = final.toFixed(2)
 
             // adding to a result table 
             let p1 = document.createElement("p");
-            let s1 = document.createTextNode(`${final}`);
+            let s1 = document.createTextNode(`${final} From eBay`);
             p1.appendChild(s1)
             document.getElementById("mydiv").appendChild(p1);
 
@@ -44,13 +47,13 @@
 
             // adding to a result table 
             let p1 = document.createElement("p");
-            let s1 = document.createTextNode(`${final}`);
+            let s1 = document.createTextNode(`"${final} From CardMarket`);
             p1.appendChild(s1)
             document.getElementById("mydiv").appendChild(p1);
         }
     </script>
     <form name ="Card info">
-        <label for="CardValue" style="margin:10px">Enter Card Value</label>
+        <label for="CardValue" style="margin:10px">Enter Card Value exclude any symbols e.g. "£"</label>
         <input id="cardval" type="float" name="inputted_card_value" style="margin: 10px;">
         <br>
 

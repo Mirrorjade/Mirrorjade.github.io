@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head style="font-weight: normal;font-family: Verdana, Geneva, Tahoma, sans-serif;">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Calculator</title>
+    <title style="font-weight: normal; font-family: Verdana, Geneva, Tahoma, sans-serif;">Card Calculator</title>
     <style>
-        
+        p{font-family:Verdana, Geneva, Tahoma, sans-serif};
         body{padding: 0; margin: 0;}
         div{text-align: center; margin-left: auto; margin-right: auto; width: 40em;}
         #full_div{width: auto; height: auto; border: 1px;}
@@ -17,17 +17,19 @@
 
     <!--Stop phones zooming into the entry field-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
+    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;"></p>
 </head>
 <div id="full_div">
-    <body class="body" style="color:black">
+    
+    <body class="body" style="background-color:lightgray;">
+    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;"></p>
     <h1>Card Calculator</h1>
     <hr>
-    
-            Enter a value into the field below and press which site you are using for pricing. The number porduced will minus site fee's (and postage in eBay's case)
-</body>
+            <p>
+            Enter a value into the field below and press which site you are using for pricing. The value produced will minus site fee's (and postage in eBay's case)
+            </p>    
     <script>
-        
+    
         function ebaycalc(){
 
             //ebay logic deduction (ebay take 12%, GBP and try to include p&p)
@@ -80,27 +82,31 @@
 
     </script>
     <body1>
+        <p>
+        
+        
         <form name ="Card info">
-            <br><br>
-            <label for="CardValue" style="margin:5px">Enter Card Value:</label>
-            <input id="cardval" type="float" name="inputted_card_value" style="margin: 5px;">
+            <br>
+            <label for="CardValue" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" style="margin: 2px;">Enter Card Value:</label>
+            <input id="cardval" type="float" name="inputted_card_value" style="margin: 5px; color: lightgray;" >
             <br>
 
             <p>Click a button to Calculate Card Value</p>
-            <input type="button" value="eBay" style="margin:10px;" onclick="ebaycalc();">
-            <input type="button" value="CardMarket" style="margin:10px" onclick="cardMcalc();">
+            <input type="button" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" value="eBay" style="margin:10px;" onclick="ebaycalc();">
+            <input type="button" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" value="CardMarket" style="margin:10px" onclick="cardMcalc();">
             <br>
-            <label for="checkbox" style="margin:10px">Apply a discount?</label>
-            <input type="checkbox" value="discount" name="discount"> 
-            <input type="button" value="Clear All Entries" onclick="on_click()">
+            <br>
+            <label for="checkbox" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" style="margin:10px">Apply a discount?</label>
+            <input type="checkbox" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"  value="discount" name="discount"> 
+            <input type="button" style="font-family: Verdana, Geneva, Tahoma, sans-serif;" value="Clear All Entries" onclick="on_click()">
         </form>
         <br><br>
+        </p>
     </body1>
 
-    <div id="full_div1">
-        <thead>The Cards True Value is. . .</thead>
+    <div id="full_div1">   
     </div>
-
+</p>
 </body>
 </div>
 

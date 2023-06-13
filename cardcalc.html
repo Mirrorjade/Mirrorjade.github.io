@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Calculator</title>
     <style>
+        
         body{padding: 0; margin: 0;}
         div{text-align: center; margin-left: auto; margin-right: auto; width: 40em;}
         #full_div{width: auto; height: auto; border: 1px;}
         #full_div1{width: auto; height: auto; border: 5px; border-color: black;}
+
+    
     </style>
-       
-        
+
+    <!--Stop phones zooming into the entry field-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 </head>
 <div id="full_div">
@@ -23,6 +27,7 @@
             Enter a value into the field below and press which site you are using for pricing. The number porduced will minus site fee's (and postage in eBay's case)
 </body>
     <script>
+        
         function ebaycalc(){
 
             //ebay logic deduction (ebay take 12%, GBP and try to include p&p)
@@ -65,7 +70,14 @@
             p1.appendChild(s1)
             document.getElementById("full_div1").appendChild(p1);
         }
-    
+        function on_click(){
+            //removing all entries from DOM
+            while(document.getElementById("full_div1").firstChild)
+            {
+                document.getElementById("full_div1").removeChild(document.getElementById("full_div1").firstChild);
+            }}
+
+
     </script>
     <body1>
         <form name ="Card info">
@@ -80,6 +92,7 @@
             <br>
             <label for="checkbox" style="margin:10px">Apply a discount?</label>
             <input type="checkbox" value="discount" name="discount"> 
+            <input type="button" value="Clear All Entries" onclick="on_click()">
         </form>
         <br><br>
     </body1>
